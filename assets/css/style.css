@@ -41,10 +41,83 @@
 html {
   font-size: 62.5%;
 }
+body {
+  margin: 4rem 3rem;
+  background-color: hsl(233, 47%, 7%);
+  box-shadow: 0px 20px 20px -10px rgba(23, 25, 41, 0.2);
+}
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+/* Card */
+.card {
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.8rem;
+}
+.card .card__hero {
+  height: 34.6rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+  background: linear-gradient(hsla(277, 64%, 61%, 0.5), hsla(277, 64%, 61%, 0.5)), url('../images/image-header-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card .card__content {
+  padding: 3.1rem;
+}
+.card .card__content .card__heading,
+.card .card__content .card__copy {
+  text-align: center;
+}
+.card .card_stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card .card_stats .card__stat {
+  font-size: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card .card_stats .card__stat .card__stat-type {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* Attribution */
 .attribution {
   display: none;
 }
 @media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: centerr;
+    max-width: 111rem;
+  }
+  .card .card__hero {
+    width: 50rem;
+    height: 50rem;
+    border-radius: 0.8rem 0.8rem 0 0;
+    background: linear-gradient(hsla(277, 64%, 61%, 0.5), hsla(277, 64%, 61%, 0.5)), url('../images/image-header-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .attribution {
     background-color: green;
     color: gray;

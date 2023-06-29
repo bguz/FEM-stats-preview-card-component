@@ -12,10 +12,14 @@
 @main-paragraph: hsla(0, 0%, 100%, 0.75);
 @stat-headings: hsla(0, 0%, 100%, 0.6);
 
-/* Box Model Hack */
-* {
-    box-sizing: border-box;
-}
+/* Fonts */
+@ff-inter: 'Inter', sans-serif;
+@ff-lexend-deca: 'Lexend Deca', sans-serif;
+
+@fw-inter-400: 400;
+@fw-inter-700: 700;
+
+@fw-lexend-deca-400: 400;
 
 /* Clear fix hack */
 .clearfix:after {
@@ -35,7 +39,7 @@ html {
     font-size: 62.5%;
 }
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: @ff-inter;
     color: @white;
     background-color: @very-dark-blue;
     min-height: 100vh;
@@ -43,7 +47,7 @@ body {
 }
 h1 {
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: @fw-inter-700;
     line-height: 3.2rem;
 }
 
@@ -87,7 +91,12 @@ p {
     }
 
     .card__content {
-        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 3rem;
 
         .card__heading,
         .card__copy {
@@ -104,21 +113,21 @@ p {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding-top: 1rem;
+            gap: 2rem;
 
             .card__stat {
                 font-size: 2.4rem;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                font-weight: 700;
-                margin: 1.2rem 0;
+                font-weight: @fw-inter-700;
 
                 .card__stat-type {
+                    font-family: @ff-lexend-deca;
                     font-size: 1.2rem;
                     text-transform: uppercase;
                     letter-spacing: 1px;
-                    font-weight: 400;
+                    font-weight: @fw-lexend-deca-400;
                     opacity: 0.6;
                 }
             }
@@ -166,6 +175,7 @@ p {
         .card__content {
             width: 55%;
             padding: 0 5.5rem;
+            align-items: flex-start;
 
             .card__heading,
             .card__copy {
@@ -174,7 +184,7 @@ p {
             .card__stats {
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: flex-start;
+                width: 100%;
             }
         }
     }

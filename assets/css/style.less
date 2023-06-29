@@ -133,6 +133,7 @@ p {
 
 @media (min-width: 900px) {
     body {
+        margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -177,60 +178,19 @@ p {
             }
         }
     }
+
+    .attribution {
+        color: @white;
+        display: block;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        padding: 1.5rem 0;
+        
+        a {
+            color: @stat-headings;
+            text-decoration: underline;
+        }
+    }
 }
-
-
-// @media (min-width: 768px) {
-//     
-//     .card {
-//         display: flex;
-//         flex-direction: row-reverse;
-//         justify-content: space-between;
-//         align-items: center;
-//         max-width: 111rem;
-
-//         .card__content {
-//             width: 55%;
-//             padding: 0 11rem;
-
-//             .card__heading,
-//             .card__copy {
-//                 text-align: left;
-//             }
-
-//             .card__stats {
-//                 flex-direction: row;
-//                 justify-content: space-between;
-//                 align-items: flex-start;
-
-//                 .card__stat {
-//                     align-items: flex-start;
-//                 }
-//             }
-//         }
-
-//         .card__hero {
-//             width: 45%;
-//             border-radius: 0 0.8rem 0.8rem 0;
-//             background: linear-gradient(@transparent-violet, @transparent-violet), url('../images/image-header-desktop.jpg');
-//             background-size: cover;
-//             background-repeat: no-repeat;
-//         }
-//     }
-//     .attribution {
-//         background-color: green;
-//         color: gray;
-//         display: block;
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         text-align: center;
-//         width: 100%;
-//         padding: 1.5rem 0;
-
-//         a {
-//             color: red;
-//             text-decoration: underline;
-//         }
-//     }
-// }

@@ -43,7 +43,7 @@ body {
   color: hsl(0, 0%, 100%);
   background-color: hsl(233, 47%, 7%);
   min-height: 100vh;
-  margin: 4rem 2rem;
+  padding: 4rem 2rem;
 }
 h1 {
   font-size: 2.8rem;
@@ -130,8 +130,9 @@ p {
 .attribution {
   display: none;
 }
-@media (min-width: 900px) {
+@media (min-width: 966px) {
   body {
+    padding-top: 0;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -162,7 +163,7 @@ p {
   }
   .card .card__content {
     width: 55%;
-    padding: 0 5.5rem;
+    padding: 0 7.5rem;
     align-items: flex-start;
   }
   .card .card__content .card__heading,
